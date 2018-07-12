@@ -100,7 +100,7 @@ class LearningAgent(Agent):
             for action in self.valid_actions:
                 self.Q[state][action] = 0.0
         
-        return self.Q
+        return
 
 
 
@@ -130,7 +130,7 @@ class LearningAgent(Agent):
                 for a in self.Q[state]:
                     if maxQvalue == self.Q[state][a]:
                         maxActions.append(a)
-                        action = random.choice(maxActions)
+                action = random.choice(maxActions)
 
         return action
 
